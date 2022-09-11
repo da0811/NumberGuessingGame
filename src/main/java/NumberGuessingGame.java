@@ -3,11 +3,10 @@ package main.java;
 import java.util.Random;
 import java.util.Scanner;
 
-import static java.lang.System.exit;
-
 public class NumberGuessingGame {
     static int randomNum;
     static int userInput;
+
     public static void main(String[] args) {
         Random rand = new Random();
         randomNum = rand.nextInt(100)+1;
@@ -16,7 +15,7 @@ public class NumberGuessingGame {
 
         System.out.print("Guess the random number between 1 to 100: ");
 
-        while(scnr.hasNextInt()) {
+        while(true) {
             try {
                 userInput = scnr.nextInt();
             }
